@@ -5,7 +5,7 @@ import "syscall"
 import "os"
 
 func main() {
-	food := "lasagna"
+	food := RandomFood()
 	env := os.Environ()
 
 	fmt.Printf("Starting tmux session with name: %v\n", food)
@@ -14,4 +14,8 @@ func main() {
 	if err != nil {
 		fmt.Printf("%v", err)
 	}
+}
+
+func RandomFood() string {
+	return "lasagna"
 }
