@@ -4,6 +4,7 @@ import "fmt"
 import "syscall"
 import "os"
 import "math/rand"
+import "time"
 
 func main() {
 	food := RandomFood()
@@ -18,6 +19,7 @@ func main() {
 }
 
 func RandomFood() string {
+	rand.Seed(time.Now().UTC().UnixNano())
 	foods := []string{
 		"lasagna",
 		"pizza",
