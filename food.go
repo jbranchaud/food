@@ -50,6 +50,8 @@ func RandomFood() string {
 		"cheese curds",
 		"pasta salad",
 		"beef stew",
+		"oreos",
+		"ribs",
 	}
 	return foods[rand.Intn(len(foods))]
 }
